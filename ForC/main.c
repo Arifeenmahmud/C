@@ -18,8 +18,7 @@ for (i=0; i<size; i++)
 printf("\t %d", arr[i]);
 }
 int main() {
-    // insert code here...
-    int numbs[5];
+    
     int even_nums[5] = {2,4,6,8,10};
     int odd_nums[5] = {1,3,5,7};
     int childrens_age[5] = {4,5,6 };
