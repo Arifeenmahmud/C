@@ -7,9 +7,39 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
 
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
+
+
+    int n;
+    printf("Enter Require Numbers: ");
+    scanf("%d",&n);
+
+    int x[n];
+    int i;
+
+    //    srand(time(NULL));
+    srand( (unsigned int) time(NULL) );
+    for(i=0;i<n;i++){
+    x[i] = rand() % 100;
+    };
+    printf("Content of the array: \n");
+    int sum = 0;
+    for(i=0;i<n;i++){
+    printf("%4d \t",x[i]);
+    sum = sum + x[i];
+    };
+
+    printf("sum is= %d\n", sum);
+
+
+    double avg = (double)sum / n;
+    printf("Avarage of the array: %lf",avg);
+    
+    
+    printf("\n \n");
     return 0;
 }
