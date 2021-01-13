@@ -13,12 +13,11 @@ void printMsg(unsigned int n) {
 if (n==0)
 return;
 
-printf("Hello World \n");
-n--;
-printMsg(n);
+
+printMsg(n-1);
+    printf("Hello World: %d \n",n);
+
 }
-
-
 
 int main(int argc, const char * argv[]) {
     
