@@ -8,8 +8,19 @@
 
 #include <stdio.h>
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+void toh(int n, int source, int aux, int dest){
+if(n==1){
+printf("Move the disk from tower no: %d to tower no: %d \n",source, dest);
+return;
+}
+toh(n-1, source, dest, aux);
+
+toh(1, source, aux, dest);
+
+toh(n-1, aux, source, dest);
+}
+
+int main() {
+    toh(3, 1, 3, 2);
+return 0;
 }
