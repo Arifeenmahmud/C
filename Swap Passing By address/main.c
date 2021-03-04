@@ -7,9 +7,22 @@
 //
 
 #include <stdio.h>
+// Passing By Address...
+void swap(int *x, int *y)
+{
+    int temp;
+    temp = *x;
+    *x = *y;
+    *y = temp;
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    printf("Hello, World!\n");
-    return 0;
+}
+
+int main()
+{
+        
+    int a,b;
+    a=10;
+    b=20;
+    swap(&a,&b);
+    printf("%d %d \n",a,b);
 }
